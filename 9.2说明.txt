@@ -1,0 +1,18 @@
+#include "stdafx.h"
+#include <iostream>
+using namespace std;  
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+    char* str_s = "There is an example of a string constant",     有问题，应该是const char，
+         *str_d, *pd;                                                                   创建指针变量
+
+    str_d = new char[strlen(str_s) + 1];                                     分配动态内存，+1——\0
+    pd = str_d;                                                                       备用指针，指向起点
+
+    while (*str_d++ = *str_s++);                                             while高效复制，=返回值为后面赋的值，while有条件，为零是false
+
+    cout << pd << endl;                                                        char*默认当字符串输出
+}
+
+

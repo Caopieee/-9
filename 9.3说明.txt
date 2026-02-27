@@ -1,0 +1,14 @@
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+int _tmain(int argc, TCHAR* argv[])
+{
+    char* str = "The fist line of the paragraph", *s;                     指针指向字符串
+    s = str;                                                                               复制
+    cout << s << endl;                                                              打印s
+
+    for (; *str == ' '; str++);                                                       当str为空执行循环，执行后str指向下一地址，但是没有前导指针，所以不执行，str不变
+    while (*str) cout << *str++;                                                打印跟前面一样
+    cout << endl;                                                                    换行
+}
