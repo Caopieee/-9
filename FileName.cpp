@@ -1,21 +1,31 @@
 #include<iostream>
 #include<cstring>
+#include<string>
+
 using namespace std;
-int main() {
-	char words[20][11];
-	int n;
-	cout << "enter the numbers of words:";
-	cin >> n;
-	cin.ignore();
-	for (int i = 0; i < n; i++) {
-		cout << "Word" << i + 1 << ":";
-		cin.getline(words[i], 11);
-	}
 
-	for (int i = 1; i < n; i += 2) {
-		cout << "Word" << i+1 << ":" << words[i] << endl;
+int main(){
+	char str1[20] = "hello";
+	char str2[20];
+	char str3[20] = "world";
 
-	}
+	strcpy_s(str2, sizeof(str2), str1);
+	cout << "str2 after strcpy:" << str2 << endl;
+
+	strcat_s(str2, sizeof(str2), str3);
+	cout << "str2 after strcat:" << str2 << endl;
+
+	cout << "length of str2:" << strlen(str2) << endl;
+
+	string s1 = "hello";
+	string s2 = "world";
+
+	cout << "length of string:" << s1.length() << endl;
+	cout << "substring of s2:" << s2.substr(1, 3) << endl;
+	cout << "position of l:" << s2.find('l') << endl;
+
+
+
 
 
 
